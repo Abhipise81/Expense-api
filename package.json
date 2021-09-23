@@ -1,0 +1,96 @@
+{
+  "name": "expenseeve-api",
+  "version": "1.0.0",
+  "description": "A Expense Management Application",
+  "main": "index.js",
+  "scripts": {
+    "prod": "node server",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server",
+    "lint": "eslint server/* --ext .js --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paragpalod/expenseeve-api.git"
+  },
+  "keywords": [
+    "expense",
+    "management"
+  ],
+  "author": "Parag Palod",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/paragpalod/expenseeve-api/issues"
+  },
+  "homepage": "https://github.com/paragpalod/expenseeve-api#readme",
+  "eslintConfig": {
+    "env": {
+      "commonjs": true,
+      "es6": true,
+      "node": true
+    },
+    "extends": [
+      "standard"
+    ],
+    "globals": {
+      "Atomics": "readonly",
+      "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+      "ecmaVersion": 2019
+    },
+    "rules": {
+      "no-throw-literal": 0,
+      "quotes": 0,
+      "indent": [
+        "error",
+        2,
+        {
+          "SwitchCase": 1
+        }
+      ],
+      "no-console": 0,
+      "no-debugger": 0,
+      "semi": [
+        1,
+        "always"
+      ],
+      "no-trailing-spaces": 0,
+      "eol-last": 0,
+      "no-underscore-dangle": 0,
+      "no-alert": 0,
+      "no-lone-blocks": 0,
+      "no-unused-vars": [
+        1,
+        {
+          "vars": "all",
+          "args": "after-used"
+        }
+      ]
+    }
+  },
+  "nodemonConfig": {
+    "events": {
+      "restart": "npm run lint"
+    }
+  },
+  "dependencies": {
+    "@hapi/glue": "^7.0.0",
+    "@hapi/good": "^8.2.0",
+    "@hapi/good-console": "^8.1.0",
+    "@hapi/good-squeeze": "^5.2.0",
+    "@hapi/hapi": "^18.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.6.4",
+    "white-out": "^2.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "nodemon": "^1.19.1"
+  }
+}
